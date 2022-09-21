@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <input #inputData type="text" class="form-control" placeholder="filter....." (input)="filterPosts(inputData.value)">
+        <div class="col-12 col-md-3"
+            *ngFor="let item of filteredPosts ; let f = first ; let lastItem = last ; let index = index ; let e = even ; let o = odd ">
+            <div class="card" [ngClass]="{'bg-warning' : o , 'bg-danger' : e , 'text-white' : f}" >
+                <img src="assets/images/download.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <h3>index = {{index}}</h3>
+                    <h3>Odd = {{o}}</h3>
+                    <h3>even = {{e}}</h3>
+                    <h3>first item = {{f}}</h3>
+                    <h3> last item = {{lastItem}}</h3>
+                    <p class="card-text">{{item.body}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

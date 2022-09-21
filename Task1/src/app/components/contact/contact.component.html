@@ -1,0 +1,18 @@
+
+<div class="container">
+    <form class="row my-5">
+        <div class="col-6">
+            <input type="text" class="form-control col-6" name="inputdata"
+             [(ngModel)]="inputData" placeholder="enter your name" >
+            {{inputData}}
+        </div>
+        <div class="col-6">
+            <input type="text" #customInput
+             (input)="handleInput(customInput)"
+              class="form-control col-6" placeholder="enter your name" >
+
+        </div>
+        </form>
+        <h2>{{inputVal}}</h2>
+        <!-- <button (click)="">Show Input Data</button> -->
+</div>

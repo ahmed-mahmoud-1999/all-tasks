@@ -1,0 +1,20 @@
+<!-- data binding (one way) -->
+<!-- interpolation -->
+<h2 #customH2>Welcome {{firstName}} </h2>
+<h3>{{getNumber()}}</h3>
+
+<!-- property binding -->
+<input [type]="inputType">
+<img [src]="imagePath">
+
+<!-- event Binding -->
+<button (click)="changeName()">Click here</button>
+
+<input type="text" #nameInput placeholder="enter your name" (keyup.control.shift)="handleInput(customH2)">
+<!-- {{nameInput.value}} -->
+
+<button>-</button>
+<span>0</span>
+<button>+</button>
+
+
